@@ -3,6 +3,6 @@ package devforrest.mario.util.generators;
 import java.util.Map;
 
 public interface IProceduralGenerator {
-    void generate(char[][] pGrid);
+    void generate(char[][] pGrid, String pMapSeed);
 }
 

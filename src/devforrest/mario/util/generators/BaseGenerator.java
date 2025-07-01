@@ -10,8 +10,8 @@ public abstract class BaseGenerator implements IProceduralGenerator {
      * Génère et sauvegarde une map à partir d'une grille de caractères.
      * Appelle cette méthode avec une grille générée dans la classe enfant.
      */
-    public void generate(char[][] pGrid) {
-        writeGridToFile(pGrid, "maps/map_output.txt");
+    public void generate(char[][] pGrid, String pMapSeed) {
+        writeGridToFile(pGrid, "maps/map_output" + pMapSeed + ".txt");
     }
 
     /**
@@ -27,5 +27,14 @@ public abstract class BaseGenerator implements IProceduralGenerator {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    
+
+    /**
+     * Convertit une string en seed (long) pour Random.
+     */
+    public long seedFromString(String pSeedString) {
+        // cm - Utilise le hashCode, casté en long pour éviter les collisions négatives
+        return pSeedString != null ? pSeedString.hashCode() & 0xffffffffL : System.currentTimeMillis();
     }
 }

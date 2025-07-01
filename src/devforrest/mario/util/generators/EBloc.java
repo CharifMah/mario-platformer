@@ -3,7 +3,7 @@ package devforrest.mario.util.generators;
 public enum EBloc {
 	PLAYER('P'),
     GOOMBA('G'),
-    RED_KOOPA('K'),
+    KOOPA('K'),
     TILE_V('V'),
     ROTATING_BLOCK('R'),
     TILE_3('3'),

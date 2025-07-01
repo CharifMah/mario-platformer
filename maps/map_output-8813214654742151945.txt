@@ -5,11 +5,11 @@
                                                   
                                                   
                                                   
+                               C C                
+    C C C                  PPPPPPPPP              
+   PPPPPP                                         
+                      CCC                         
+                     PPPPPPP                      
                                                   
-       PPPPPPPP                C  C    C          
-                               PPPPPPPPP          
-                                                  
-                   PPPPPPP                        
-                                                  
-  P      K  K   G      G                          
+  P K     K                    K     K            
 22222222222222222222222222222222222222222222222222
