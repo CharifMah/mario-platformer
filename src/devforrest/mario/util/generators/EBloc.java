@@ -1,7 +1,7 @@
 package devforrest.mario.util.generators;
 
 public enum EBloc {
-	PLAYER('P'),
+	PLAYER('Z'),
     GOOMBA('G'),
     KOOPA('K'),
     TILE_V('V'),

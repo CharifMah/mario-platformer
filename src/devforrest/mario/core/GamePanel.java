@@ -61,13 +61,15 @@ public class GamePanel extends JPanel implements Runnable {
 		
 		SM_22050_Hz = new MarioSoundManager22050Hz(new AudioFormat(22050, 8, 1, true, true));
 		SM_10512_Hz = new MarioSoundManager10512Hz(new AudioFormat(10512, 8, 1, true, true));
- 		mario = new Mario(SM_22050_Hz);
 		
 		try {
 			manager = new GameLoader();
+
 			renderer = new GameRenderer();
 			renderer.setBackground(ImageIO.read(new File("backgrounds/background2.png")));
 			map = manager.loadMap("maps/map_output.txt", SM_22050_Hz); // use the ResourceManager to load the game map
+	 		mario = new Mario(SM_22050_Hz,manager.getPlayerStartX(),manager.getPlayerStartY());
+
 			//backgroundMap = manager.loadOtherMaps("backgroundMap.txt");
 			//foregroundMap = manager.loadOtherMaps("foregroundMap.txt");
 			map.setPlayer(mario); // set the games main player to mario

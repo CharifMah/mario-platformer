@@ -19,6 +19,7 @@ import devforrest.mario.objects.creatures.Goomba;
 import devforrest.mario.objects.creatures.Platform;
 import devforrest.mario.objects.creatures.RedKoopa;
 import devforrest.mario.objects.creatures.RedShell;
+import devforrest.mario.objects.mario.Mario;
 import devforrest.mario.objects.tiles.QuestionBlock;
 import devforrest.mario.objects.tiles.RotatingBlock;
 import devforrest.mario.objects.tiles.SlopedTile;
@@ -34,6 +35,13 @@ public class GameLoader {
 	private BufferedImage sloped_image;
 	private BufferedImage grass_edge;
 	private BufferedImage grass_center;
+	// cm - Player Pos
+	private int playerStartX = 25; // valeur par défaut
+	private int playerStartY = 140; // valeur par défaut
+
+	public int getPlayerStartX() { return playerStartX; }
+	public int getPlayerStartY() { return playerStartY; }
+
 	
 	public GameLoader() {
 		 
@@ -179,6 +187,11 @@ public class GameLoader {
 					GameTile t = new GameTile(pixelX, pixelY, grass_center);
 					newMap.setTile(x, y, t);
 				}
+				else if (ch == 'Z') {
+	                playerStartX = pixelX;
+	                playerStartY = pixelY;
+	                ch = ' ';
+	            }
 			}
 		}
 		return newMap;	

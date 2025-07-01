@@ -43,9 +43,6 @@ public class SimpleTestGenerator2 extends BaseGenerator {
             lGrid[height - 2][x] = enemy;
         }
 
-        // Place le joueur "P" à gauche, juste au-dessus du sol
-        lGrid[height - 2][2] = EBloc.PLAYER.getSymbol();
-
         // Appelle generate pour sauvegarder la grille
         generate(lGrid,pSeedString);
     }

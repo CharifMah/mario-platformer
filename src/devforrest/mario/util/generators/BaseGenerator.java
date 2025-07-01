@@ -4,6 +4,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import devforrest.mario.objects.mario.Mario;
+
 public abstract class BaseGenerator implements IProceduralGenerator {
 
     /**
@@ -28,8 +30,7 @@ public abstract class BaseGenerator implements IProceduralGenerator {
             e.printStackTrace();
         }
     }
-    
-
+       
     /**
      * Convertit une string en seed (long) pour Random.
      */

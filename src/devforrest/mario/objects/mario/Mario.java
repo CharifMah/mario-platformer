@@ -59,8 +59,6 @@ public class Mario extends CollidableObject{
 
 	public static final float GRAVITY = 0.0008f;
 	public static final float FRICTION = 0.0004f;                   
-	private static final int STARTING_X = 25;
-	private static final int STARTING_Y = 140;
 	private static final float STARTING_DY = .03f;
 	private static final float INITIAL_JUMP_HEIGHT = -.34f; 
 	private static final float JUMP_MULTIPLIER = .46f;
@@ -95,7 +93,7 @@ public class Mario extends CollidableObject{
 	private Platform platform;
 	private MarioSoundManager10512Hz soundManager2;
 	
-	public Mario(MarioSoundManager22050Hz soundManager) {
+	public Mario(MarioSoundManager22050Hz soundManager,int STARTING_X,int STARTING_Y) {
 		
 		super(STARTING_X, STARTING_Y, soundManager);
 		
