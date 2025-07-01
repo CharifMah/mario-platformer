@@ -67,7 +67,7 @@ public class GamePanel extends JPanel implements Runnable {
 			manager = new GameLoader();
 			renderer = new GameRenderer();
 			renderer.setBackground(ImageIO.read(new File("backgrounds/background2.png")));
-			map = manager.loadMap("maps/map2.txt", SM_22050_Hz); // use the ResourceManager to load the game map
+			map = manager.loadMap("maps/map_output.txt", SM_22050_Hz); // use the ResourceManager to load the game map
 			//backgroundMap = manager.loadOtherMaps("backgroundMap.txt");
 			//foregroundMap = manager.loadOtherMaps("foregroundMap.txt");
 			map.setPlayer(mario); // set the games main player to mario
